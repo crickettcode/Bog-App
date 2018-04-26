@@ -4,13 +4,16 @@
   "description": "Practice",
   "main": "app.js",
   "dependencies": {
+    "axios": "^0.18.0",
     "body-parser": "^1.18.2",
     "concurrently": "^3.5.1",
     "dotenv": "^5.0.1",
     "express": "^4.16.3",
     "mongoose": "^5.0.16",
     "morgan": "^1.9.0",
-    "npm": "^6.0.0"
+    "npm": "^6.0.0",
+    "react-router-dom": "^4.2.2",
+    "styled-components": "^3.2.6"
   },
   "devDependencies": {},
   "scripts": {
