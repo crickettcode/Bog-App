@@ -19,6 +19,16 @@ mongoose.connection.on('error', (error) => {
 
 })
 
+Creature.remove().then(() => {
+    const lucas = new Creature({ name: 'Lucas', description: 'datJedi' })
+    return lucas.save()
+}).then(() => {
+
+    const darthus = new Creature({ name: 'Darthus Vader', description: 'Father of Lucas' })
+    return darthus.save()
+}).then(() => {
+    db.close()
+})
 
 
 const db = mongoose.connection
