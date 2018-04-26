@@ -3,11 +3,14 @@ const express = require('express')
 const path = require('path')
 const mongoose = require('mongoose')
 const logger = require('morgan')
-const cookieParser = 
+
 const bodyParser = require('body-parser')
+//const methodOverride = require('method-override')
+
 const app = express()
+//app.use(methodOverride('_method'))
 
-
+mongoose.Promise = global.Promise
 mongoose.connect(process.env.MONGODB_URI)
 
 
@@ -20,8 +23,14 @@ db.on('open', () => {
     console.log('Connected to MongoDB')
 })
 
+db.once('open', () => {
+    console.log('Space Connection!')
+})
+
 app.use(logger('dev'))
 app.use(bodyParser.json())
+
+
 
 app.get('/', (req, res) => {
     res.send("What it do little Moon")

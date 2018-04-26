@@ -1,0 +1,33 @@
+{
+  "name": "Bog-App",
+  "version": "1.0.0",
+  "description": "Practice",
+  "main": "app.js",
+  "dependencies": {
+    "body-parser": "^1.18.2",
+    "concurrently": "^3.5.1",
+    "dotenv": "^5.0.1",
+    "express": "^4.16.3",
+    "mongoose": "^5.0.16",
+    "morgan": "^1.9.0",
+    "npm": "^6.0.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "start": "node app.js",
+    "dev": "concurrently \"nodemon app.js\" \"cd ./client  && npm start \" ",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "postinstall": "cd client && npm install && npm run build"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/crickettcode/Bog-App.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/crickettcode/Bog-App/issues"
+  },
+  "homepage": "https://github.com/crickettcode/Bog-App#readme"
+}
